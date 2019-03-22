@@ -3,9 +3,10 @@ import Character from './Character'
 
 
 const CharacterList = (props) => {
-    console.log(props)
+
     return (
-        <div className="character-list">
+        <div className="characters-list">
+
             {props.characterList.map((char) =>
                 <Character
                     key={char.name}
