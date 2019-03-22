@@ -26,11 +26,19 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+ React solves this problem, without even having the page reload. It does by a concept called virtual DOM. When a page is rendered using React, the state of the DOM tree is stored, and when there any updates to be made to the UI, it does a diff on the previous (old) DOM tree with the new one, and updates only the ones that have changed. This helps with a lot of DOM operations/refreshes and improv performance. When using React different UI parts of the app are separated into 'components'. One component would contain the necessary markup as well as the required JS to make it completely functional. Writing code in this way also makes it reusable. The same component could be used at different places in your app or even in an entirely different app.
+
 - [ ] What does it mean to _think_ in react?
+
+Breaking UI into Components hierarchy - single responsibility principle meaning that ideally a component should only do one thing. A component should be a pure function which transforms data into a user interface. The second step will be building the sketch - static version of your app that renders your data model. Next, think what components of you app should be interactive and which will  remain unchanged over time. (state and props). Next, find an owner component (a single component above all the components that need the state in the hierarchy)- that will be the place where you state should live.
 
 - [ ] Describe state.
 
+State is a heart of every react component - it is an an object that determines how that component renders & behaves.  State is what allows to create components that are dynamic and interactive. State is private and fully controlled by the component. Available on class components.The state of one component will often become the props of  a child component
+
 - [ ] Describe props.
+
+Props - properties. Props are how components talk to each other. Props flow downwards from the parent component. Functional or class components should never modify its own props. The props are passed to the child within the render method of the parent.
 
 ## Project Set Up
 
